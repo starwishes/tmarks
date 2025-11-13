@@ -121,11 +121,9 @@ pnpm dev
 
 3. **创建资源**
    ```bash
-   wrangler login
-   cd tmarks
-   wrangler d1 create tmarks-prod-db
-   wrangler kv:namespace create "RATE_LIMIT_KV"
-   wrangler kv:namespace create "PUBLIC_SHARE_KV"
+   d1 create tmarks-prod-db
+   kv:namespace create "RATE_LIMIT_KV"
+   kv:namespace create "PUBLIC_SHARE_KV"
    ```
 
 4. **配置wrangler.toml**
@@ -133,6 +131,7 @@ pnpm dev
 
 5. **运行数据库迁移**
    控制台执行下面的sql
+   ```
    tmarks\migrations\d1_console_pure.sql  我们控制台可以直接执行这个数据初始化
    ```
 
